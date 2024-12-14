@@ -1,1 +1,4 @@
-/.venv
+/.venv/
+
+Store/__pycache__/
+Store/migrations/
