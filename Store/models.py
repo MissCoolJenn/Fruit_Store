@@ -7,7 +7,7 @@ def return_name(instance):
 class Product(models.Model):
     name = models.CharField(null=False, max_length=50)
     description = models.TextField(null=False)
-    sostav = models.TextField(null=False)
+    sostav = models.TextField(null=True)
     amount = models.CharField(null=False, max_length=15)
     price = models.IntegerField(null=False)
     image = models.ImageField(null=False)

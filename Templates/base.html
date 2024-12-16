@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/base.css' %}">
+</head>
+<body>
+    <header>
+        <img src="{{ MEDIA_URL }}Icons/1488.jpg" alt="Image">
+        <p>Fruit Store</p>
+        
+    </header>
+    
+    {% block content %}
+    {% endblock content %}
+
+</body>
+
+<script src="{% static 'JS/base.js' %}"></script> 
+
+</html>
