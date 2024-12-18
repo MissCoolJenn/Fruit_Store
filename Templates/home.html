@@ -1,9 +1,22 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block content %}
 
 <main>
-    <p>Hello World!</p>
+    {% for prod in product_list %}
+        <div class="product" id="{{prod.name}}">
+            <img class="product_img" src="{{ MEDIA_URL }}{{ prod.image }}">
+            <p><b>{{prod.name}}</b></p>
+            <p>Amount: {{prod.amount}}</p>
+            <div class="product_price">
+                <p>{{prod.price}}</p>
+            </div>
+        </div>
+    {% endfor %}
 </main>
+
+<link rel="stylesheet" type="text/css" href="{% static 'CSS/home.css' %}">
 
 {% endblock content %}

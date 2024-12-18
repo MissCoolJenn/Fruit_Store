@@ -12,9 +12,22 @@
 </head>
 <body>
     <header>
-        <img src="{{ MEDIA_URL }}Icons/1488.jpg" alt="Image">
-        <p>Fruit Store</p>
-        
+        <div class="header_l">
+            <div id="header_site_icon">
+               <img src="{{ MEDIA_URL }}Icons/1488.jpg" alt="Image" id="site_icon" class="icon"> 
+            </div>
+            <div id="site_name">
+                <p id="site_name_p">Fruit Store</p>
+            </div>
+            
+        </div>
+
+        <div class="header_r">
+            <img src="{{ MEDIA_URL }}Icons/1488.jpg" alt="Image" class="icon">
+            <img src="{{ MEDIA_URL }}Icons/1488.jpg" alt="Image" class="icon">
+            <img src="{{ MEDIA_URL }}Icons/1488.jpg" alt="Image" class="icon">
+            <img src="{{ MEDIA_URL }}Icons/1488.jpg" alt="Image" class="icon">
+        </div>
     </header>
     
     {% block content %}

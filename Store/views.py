@@ -3,6 +3,6 @@ from .models import Product
 
 class HomePage(ListView):
     model = Product
-    #ordering = ['title']
+    ordering = ['name']
     title = 'Fruit Store'
     template_name = 'home.html'

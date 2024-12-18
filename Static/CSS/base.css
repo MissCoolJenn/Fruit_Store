@@ -1,0 +1,48 @@
+body {
+    margin: 0 0 0 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.header_l, .header_r {
+    display: flex;
+    flex-direction: row;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+header {
+    background-color: rgb(194, 194, 194);
+}
+body {
+    background-color: rgb(236, 236, 236);
+}
+.header_l {
+    background-color:rgb(181, 254, 232);
+}
+.header_r {
+    background-color: rgb(167, 171, 255);
+}
