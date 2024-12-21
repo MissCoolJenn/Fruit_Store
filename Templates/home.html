@@ -5,16 +5,29 @@
 {% block content %}
 
 <main>
-    {% for prod in product_list %}
-        <div class="product" id="{{prod.name}}">
-            <img class="product_img" src="{{ MEDIA_URL }}{{ prod.image }}">
-            <p><b>{{prod.name}}</b></p>
-            <p>Amount: {{prod.amount}}</p>
-            <div class="product_price">
-                <p>{{prod.price}}</p>
-            </div>
+    <div id="nav">
+        <div>
+            <a href="">Головна</a>
         </div>
-    {% endfor %}
+        <div id="nav_s">
+            <a> > </a>
+        </div>
+        <div>
+            <a href="">Товари</a>
+        </div>
+    </div>
+    <div id="product_list">
+        {% for prod in product_list %}
+            <div class="product" id="{{prod.name}}">
+                <img class="product_img" src="{{ MEDIA_URL }}{{ prod.image }}">
+                <p><b>{{prod.name}}</b></p>
+                <p>Amount: {{prod.amount}}</p>
+                <div class="product_price">
+                    <p>{{prod.price}}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 </main>
 
 <link rel="stylesheet" type="text/css" href="{% static 'CSS/home.css' %}">
