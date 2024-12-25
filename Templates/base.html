@@ -14,15 +14,25 @@
     <header>
         <div class="header_l">
             <div id="header_site_icon">
-               <img src="{{ MEDIA_URL }}Icons/1488.jpg" alt="Image" id="site_icon" class="icon"> 
-            </div>
+                <a href="{% url 'home'%}">
+                    <img src="{{ MEDIA_URL }}Icons/1488.jpg" alt="Image" id="site_icon" class="icon"> 
+                </a>
+            </div>  
             <div id="site_name">
-                <p id="site_name_p">Fruit Store</p>
+                <a id="site_name_p" href="{% url 'home' %}">Fruit Store</a>
             </div>
-            
         </div>
 
         <div class="header_r">
+            {% if user.is_authenticated %}
+                <p>Hi, <b>{{ user.username }}</b>!</p>
+                <form id="logout-form" action="{% url "logout" %}" method="POST">
+                    {% csrf_token %}
+                    <button type="submit">Log out</button>
+                </form>
+            {% else %}
+                <a href="login">Log in</a>
+            {% endif %}
             <img src="{{ MEDIA_URL }}Icons/1488.jpg" alt="Image" class="icon">
             <img src="{{ MEDIA_URL }}Icons/1488.jpg" alt="Image" class="icon">
             <img src="{{ MEDIA_URL }}Icons/1488.jpg" alt="Image" class="icon">
